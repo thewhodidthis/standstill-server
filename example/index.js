@@ -1,7 +1,10 @@
-var output = require('../')();
+'use strict';
 
-var seed = setInterval(function seed(stream) {
-  var seed = Math.floor(Math.random() * 100) - 50;
+const Filter = require('../');
+const output = new Filter(100);
+
+const seed = setInterval(function seed(stream) {
+  const seed = Math.floor(Math.random() * 100) - 50;
 
   console.log('\n----');
   console.log(seed);
@@ -9,7 +12,7 @@ var seed = setInterval(function seed(stream) {
   stream.write(seed.toString());
 }, 200, output);
 
-var stop = setTimeout(function stop() {
+const stop = setTimeout(function stop() {
   console.log('\n----\n');
 
   output.end();
