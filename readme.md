@@ -1,2 +1,2 @@
-## Trending
+## Bipolar
 > Helps detect change

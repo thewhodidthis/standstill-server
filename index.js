@@ -1,11 +1,11 @@
 var util = require('util');
 var stream = require('stream');
 
-var Transform = stream.Transform || require('readable-stream').Transform;
+var Bipolar = stream.Transform;
 
-function Trending(seed) {
-  if (!(this instanceof Trending)) {
-    return new Trending(seed);
+function Bipolar(seed) {
+  if (!(this instanceof Bipolar)) {
+    return new Bipolar(seed);
   }
 
   Transform.call(this, seed);
@@ -13,17 +13,17 @@ function Trending(seed) {
   this.value = parseInt(seed, 10) || 0;
 }
 
-util.inherits(Trending, Transform);
+util.inherits(Bipolar, Transform);
 
-Trending.prototype._transform = function (chunk, encoding, cb) {
+Bipolar.prototype._transform = function (chunk, encoding, cb) {
   var input = parseInt(chunk.toString(), 10);
-  var delta = (input - this.value) / 100;
+  var delta = (input - this.value) * 0.01;
 
   this.value = input;
   this.push(delta.toString());
 
-  cb();
+  cb(delta);
 };
 
-module.exports = Trending;
+module.exports = Bipolar;
 
