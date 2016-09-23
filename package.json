@@ -17,8 +17,7 @@
     "url": "https://github.com/thewhodidthis/bipolar/issues"
   },
   "directories": {
-    "example": "example",
-    "example": "example/www"
+    "example": "example"
   },
   "config": {
     "jscsrc": ".jscsrc"
