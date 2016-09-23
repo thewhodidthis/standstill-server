@@ -7,7 +7,7 @@
 npm install thewhodidthis/bipolar
 
 # Try the example
-cd bipolar; node example
+node node_modules/@thewhodidthis/bipolar/example
 ```
 
 ### Usage
