@@ -16,6 +16,10 @@
   "bugs": {
     "url": "https://github.com/thewhodidthis/bipolar/issues"
   },
+  "directories": {
+    "example": "example",
+    "example": "example/www"
+  },
   "config": {
     "jscsrc": ".jscsrc"
   },
