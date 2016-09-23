@@ -1,10 +1,8 @@
 var util = require('util');
-var stream = require('stream');
-
-var Bipolar = stream.Transform;
+var Transform = require('stream').Transform;
 
 function Bipolar(seed) {
-  if (!(this instanceof Bipolar)) {
+  if (this instanceof Bipolar === false) {
     return new Bipolar(seed);
   }
 
@@ -15,14 +13,13 @@ function Bipolar(seed) {
 
 util.inherits(Bipolar, Transform);
 
-Bipolar.prototype._transform = function (chunk, encoding, cb) {
-  var input = parseInt(chunk.toString(), 10);
+Bipolar.prototype._transform = function (chunk, encoding, callback) {
+  var input = parseInt(chunk, 10);
   var delta = (input - this.value) * 0.01;
 
   this.value = input;
-  this.push(delta.toString());
 
-  cb(delta);
+  callback(null, delta.toString());
 };
 
 module.exports = Bipolar;
