@@ -1,26 +1,22 @@
-var util = require('util');
-var Transform = require('stream').Transform;
+'use strict';
 
-function Bipolar(seed) {
-  if (this instanceof Bipolar === false) {
-    return new Bipolar(seed);
+const Transform = require('stream').Transform;
+
+class Bipolar extends Transform {
+  constructor(seed) {
+    super(seed);
+
+    this._store = parseInt(seed, 10) || 0;
   }
 
-  Transform.call(this, seed);
+  _transform(chunk, encoding, callback) {
+    const input = parseInt(chunk, 10);
+    const delta = (input - this._store) * 0.01;
 
-  this.value = parseInt(seed, 10) || 0;
+    this._store = input;
+
+    callback(null, delta.toString());
+  }
 }
 
-util.inherits(Bipolar, Transform);
-
-Bipolar.prototype._transform = function (chunk, encoding, callback) {
-  var input = parseInt(chunk, 10);
-  var delta = (input - this.value) * 0.01;
-
-  this.value = input;
-
-  callback(null, delta.toString());
-};
-
 module.exports = Bipolar;
-
