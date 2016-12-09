@@ -1,8 +1,6 @@
-'use strict';
+import { Transform } from 'stream';
 
-var stream = require('stream');
-
-class Bipolar extends stream.Transform {
+class Bipolar extends Transform {
   constructor(seed) {
     super(seed);
 
@@ -19,4 +17,4 @@ class Bipolar extends stream.Transform {
   }
 }
 
-module.exports = Bipolar;
+export default Bipolar;
