@@ -1,5 +1,3 @@
-'use strict';
-
 const Filter = require('../');
 const output = new Filter(100);
 

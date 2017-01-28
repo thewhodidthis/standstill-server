@@ -31,8 +31,8 @@
     "preversion": "npm start"
   },
   "engines": {
-    "node": ">=4.2.4",
-    "npm": ">=3.5.3"
+    "node": ">=6.6.0",
+    "npm": ">=3.10.3"
   },
   "dependencies": {},
   "devDependencies": {
