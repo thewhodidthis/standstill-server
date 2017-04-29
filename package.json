@@ -1,0 +1,50 @@
+{
+  "name": "bipolar",
+  "version": "0.0.0",
+  "description": "Helps detect change",
+  "keywords": [
+    "delta",
+    "percent",
+    "trending"
+  ],
+  "main": "index.js",
+  "module": "index.es",
+  "homepage": "https://github.com/thewhodidthis/bipolar#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thewhodidthis/bipolar.git"
+  },
+  "bugs": {
+    "url": "https://github.com/thewhodidthis/bipolar/issues"
+  },
+  "scripts": {
+    "test": "node test",
+    "clear": "npm run clear:dist && npm run clear:logs",
+    "clear:dist": "rm -rf dist/",
+    "clear:logs": "rm -f *.log",
+    "lint": "eslint index.es; exit 0",
+    "start": "npm run build && npm run build:min",
+    "build": "rollup -c",
+    "build:min": "uglifyjs dist/bipolar.js -cm > dist/bipolar.min.js",
+    "preversion": "npm start"
+  },
+  "engines": {
+    "node": ">=4.2.4",
+    "npm": ">=3.5.3"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel-eslint": "latest",
+    "babel-plugin-external-helpers": "latest",
+    "babel-preset-es2015": "latest",
+    "eslint": "latest",
+    "eslint-config-airbnb-base": "latest",
+    "eslint-plugin-import": "latest",
+    "rollup": "latest",
+    "rollup-plugin-babel": "latest",
+    "tape": "latest",
+    "uglify-js": "latest"
+  },
+  "author": "sChzs BkgNns <sotirios.bakagiannis@gmail.com> (https://www.thewhodidthis.com)",
+  "license": "Unlicense"
+}
