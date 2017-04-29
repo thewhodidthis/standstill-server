@@ -1,12 +1,13 @@
 var bipolar = (function () {
   'use strict';
 
-  // Helps track deltas
+  // Helps report differences
   var bipolar = function bipolar() {
     for (var _len = arguments.length, prev = Array(_len), _key = 0; _key < _len; _key++) {
       prev[_key] = arguments[_key];
     }
 
+    // Reset
     var memo = prev;
 
     return function () {
@@ -19,9 +20,10 @@ var bipolar = (function () {
         return next[i] - v;
       });
 
-      // Replace
+      // Save for later
       memo = next;
 
+      // Array of deltas
       return diff;
     };
   };
