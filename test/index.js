@@ -5,8 +5,8 @@ test('will return', (t) => {
   const tracker = bipolar();
   const results = tracker();
 
-  t.equal(typeof tracker, 'function', 'returns a lamda on init');
-  t.ok(Array.isArray(results), 'lamda returns an array on call');
+  t.equal(typeof tracker, 'function', 'returns lamda on init');
+  t.ok(Array.isArray(results), 'lamda returns array on call');
   t.end();
 });
 
