@@ -20,7 +20,7 @@
   "scripts": {
     "test": "node test",
     "lint": "eslint index.es",
-    "start": "rollup -c && uglifyjs dist/bipolar.js -cm > dist/bipolar.min.js"
+    "start": "rollup -c && uglifyjs dist/bipolar.js -cmo dist/bipolar.min.js"
   },
   "engines": {
     "node": ">=4.2.4",
