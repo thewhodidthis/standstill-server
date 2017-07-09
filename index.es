@@ -1,19 +1,18 @@
 // Helps report differences
 const bipolar = (...prev) => {
   // Reset
-  let memo = prev;
+  let memo = prev
 
   return (...next) => {
     // Calculate deltas
-    const diff = memo.map((v, i) => next[i] - v);
+    const diff = memo.map((v, i) => next[i] - v)
 
     // Save for later
-    memo = next;
+    memo = next
 
     // Array of deltas
-    return diff;
-  };
-};
+    return diff
+  }
+}
 
-export default bipolar;
-
+export default bipolar
