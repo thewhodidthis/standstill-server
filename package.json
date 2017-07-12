@@ -29,6 +29,7 @@
   "devDependencies": {
     "@thewhodidthis/eslint-config": "latest",
     "buble": "latest",
+    "eslint": "latest",
     "rollup": "latest",
     "tape": "latest"
   },
