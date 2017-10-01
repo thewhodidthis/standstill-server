@@ -3,7 +3,7 @@
   "version": "0.0.3",
   "description": "Helps detect change",
   "main": "index.js",
-  "module": "index.es",
+  "module": "index.mjs",
   "homepage": "https://github.com/thewhodidthis/bipolar#readme",
   "repository": {
     "type": "git",
@@ -15,8 +15,8 @@
   "scripts": {
     "pretest": "eslint test.js",
     "test": "node test",
-    "prestart": "eslint index.es",
-    "start": "rollup -f cjs index.es | buble > index.js"
+    "prestart": "eslint index.mjs",
+    "start": "rollup -f cjs index.mjs | buble > index.js"
   },
   "eslintConfig": {
     "extends": "@thewhodidthis"
