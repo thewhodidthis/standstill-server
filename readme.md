@@ -1,9 +1,8 @@
-## Bipolar
 > Helps detect change
 
 ### Setup
 ```sh
-# Install from github
+# Fetch latest from github
 npm install thewhodidthis/bipolar
 ```
 
