@@ -1,19 +1,13 @@
 'use strict';
 
 // Helps report differences
-var bipolar = function () {
-  var prev = [], len = arguments.length;
-  while ( len-- ) prev[ len ] = arguments[ len ];
-
+const bipolar = (...prev) => {
   // Reset
-  var memo = prev;
+  let memo = prev;
 
-  return function () {
-    var next = [], len = arguments.length;
-    while ( len-- ) next[ len ] = arguments[ len ];
-
+  return (...next) => {
     // Calculate deltas
-    var diff = memo.map(function (v, i) { return next[i] - v; });
+    const diff = memo.map((v, i) => next[i] - v);
 
     // Save for later
     memo = next;
@@ -24,4 +18,3 @@ var bipolar = function () {
 };
 
 module.exports = bipolar;
-
