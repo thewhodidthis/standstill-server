@@ -1,24 +1,18 @@
-const test = require('tape')
+'use strict'
+
+const { equal, ok } = require('tapeless')
 const bipolar = require('./')
 
-test('will return', (t) => {
-  const tracker = bipolar()
-  const results = tracker()
+const tracker = bipolar()
+const results = tracker()
 
-  t.equal(typeof tracker, 'function', 'returns lamda on init')
-  t.ok(Array.isArray(results), 'lamda returns array on call')
-  t.end()
-})
+equal(typeof tracker, 'function', 'returns lamda on init', 'will return')
+ok(Array.isArray(results), 'lamda returns array on call')
 
-test('will compute', (t) => {
-  const x = 1
-  const y = 1
+const i = 1
+const output = bipolar(0, i)(i, i)
+const [x, y] = output
 
-  const tracker = bipolar(0, 0)
-  const results = tracker(x, y)
-
-  t.equal(x, x)
-  t.equal(y, y)
-  t.equal(results.length, 2, 'input/output length is a match')
-  t.end()
-})
+equal(x, 1, 'is up', 'will compute')
+equal(y, 0, 'is down')
+equal(output.length, 2, 'input/output length is a match')
