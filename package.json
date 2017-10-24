@@ -1,6 +1,6 @@
 {
   "name": "bipolar",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Helps detect change",
   "main": "index",
   "module": "index.mjs",
