@@ -3,7 +3,7 @@
 ### Setup
 ```sh
 # Fetch latest from github
-npm install thewhodidthis/bipolar
+npm i thewhodidthis/bipolar
 ```
 
 ### Usage
