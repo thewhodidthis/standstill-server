@@ -1,16 +1,16 @@
 'use strict'
 
 const { equal, ok } = require('tapeless')
-const bipolar = require('./')
+const bender = require('./')
 
-const tracker = bipolar()
-const results = tracker()
+const filter = bender()
+const result = filter()
 
-equal(typeof tracker, 'function', 'returns lamda on init', 'will return')
-ok(Array.isArray(results), 'lamda returns array on call')
+equal(typeof filter, 'function', 'returns lamda on init', 'will return')
+ok(Array.isArray(result), 'lamda returns array on call')
 
 const i = 1
-const output = bipolar(0, i)(i, i)
+const output = bender(0, i)(i, i)
 const [x, y] = output
 
 equal(x, 1, 'is up', 'will compute')
