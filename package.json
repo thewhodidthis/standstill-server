@@ -18,22 +18,20 @@
     "prestart": "eslint index.mjs",
     "start": "rollup -f cjs index.mjs > index.js",
     "preexample": "eslint example.js",
-    "example": "rollup -c node:x -f iife example.js | kpow"
+    "example": "node example"
   },
   "eslintConfig": {
     "extends": "@thewhodidthis"
   },
   "engines": {
-    "node": ">=6.4.0",
-    "npm": ">=3.10.3"
+    "node": ">=6.11.0",
+    "npm": ">=3.10.10"
   },
   "dependencies": {},
   "devDependencies": {
     "@thewhodidthis/eslint-config": "latest",
     "eslint": "latest",
-    "kpow": "latest",
     "rollup": "latest",
-    "rollup-config-x": "latest",
     "tapeless": "latest"
   },
   "keywords": [
