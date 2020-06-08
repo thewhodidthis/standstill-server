@@ -1,12 +1,20 @@
-> Helps detect change
+## about
 
-### Setup
+Helps detect change.
+
+## setup
+
+Fetch the latest stable version from the _npm_ registry:
+
 ```sh
-# Fetch latest from github
-npm i thewhodidthis/bipolar
+# Add to "dependencies"
+npm install @thewhodidthis/bipolar
 ```
 
-### Usage
+## usage
+
+Instantiate with a pair of start values, then call repeatedly. For example,
+
 ```js
 import bipolar from 'bipolar'
 
@@ -17,3 +25,7 @@ document.addEventListener('click', ({ x, y }) => {
   console.log(filter(x, y))
 })
 ```
+
+## see also
+
+- [bipolar-stream](https://github.com/thewhodidthis/bipolar-stream)
