@@ -1,5 +1,5 @@
 // Helps report differences
-const bipolar = (...prev) => {
+function bipolar(...prev) {
   // Reset
   let memo = prev
 

@@ -1,7 +1,7 @@
 'use strict';
 
 // Helps report differences
-const bipolar = (...prev) => {
+function bipolar(...prev) {
   // Reset
   let memo = prev;
 
@@ -15,6 +15,6 @@ const bipolar = (...prev) => {
     // Array of deltas
     return diff
   }
-};
+}
 
 module.exports = bipolar;
