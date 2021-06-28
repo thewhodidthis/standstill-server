@@ -1,7 +1,7 @@
-'use strict'
+import { assert, report } from 'tapeless'
+import bender from './main.js'
 
-const { equal, ok } = require('tapeless')
-const bender = require('./')
+const { equal, ok } = assert
 
 const filter = bender()
 const result = filter()
@@ -25,3 +25,5 @@ equal
   .test(y, 0)
   .describe('input/output length is a match', 'will compute')
   .test(output.length, 2)
+
+report()
