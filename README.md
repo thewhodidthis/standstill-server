@@ -4,10 +4,10 @@ Helps detect change.
 
 ## setup
 
-Fetch the latest stable version from the _npm_ registry:
+Download from the _npm_ registry:
 
 ```sh
-# Add to "dependencies"
+# Add to package.json
 npm install @thewhodidthis/bipolar
 ```
 
