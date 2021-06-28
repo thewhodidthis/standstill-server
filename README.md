@@ -8,7 +8,17 @@ Download from the _npm_ registry:
 
 ```sh
 # Add to package.json
-npm install @thewhodidthis/bipolar
+npm install bipolar
+```
+
+Source from an import map to use with Deno or in-browser directly:
+
+```json
+{
+  "imports": {
+    "bipolar": "https://cdn.jsdelivr.net/npm/bipolar@latest/main.js"
+  }
+}
 ```
 
 ## usage
